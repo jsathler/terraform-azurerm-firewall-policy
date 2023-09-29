@@ -1,18 +1,3 @@
-# Azure Firewall Policy Terraform module
-
-Terraform module which creates Azure Firewall Policy resources on Azure.
-
-These types of resources are supported:
-
-* [Azure Firewall Manager policy](https://learn.microsoft.com/en-us/azure/firewall-manager/policy-overview)
-
-## Terraform versions
-
-Terraform 1.5.6 and newer.
-
-## Usage
-
-```hcl
 module "firewall-policy" {
   source              = "jsathler/firewall-policy/azurerm"
   location            = azurerm_resource_group.default.location
@@ -37,6 +22,3 @@ module "firewall-policy" {
     default_log_analytics_workspace_id = azurerm_log_analytics_workspace.default.id
   }
 }
-```
-
-More samples in examples folder
